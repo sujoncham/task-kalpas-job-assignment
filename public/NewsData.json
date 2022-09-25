@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "this is title 1",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem qui animi alias vero repudiandae. Amet dolore expedita perferendis! Non cumque harum animi impedit illum omnis ipsa aliquid fugiat laboriosam error!",
+    "img": "./assets/news1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "this is title 2",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem qui animi alias vero repudiandae. Amet dolore expedita perferendis! Non cumque harum animi impedit illum omnis ipsa aliquid fugiat laboriosam error!",
+    "img": "./assets/news1.jpg"
+  },
+  {
+    "id": 3,
+    "title": "this is title 3",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem qui animi alias vero repudiandae. Amet dolore expedita perferendis! Non cumque harum animi impedit illum omnis ipsa aliquid fugiat laboriosam error!",
+    "img": "./assets/news1.jpg"
+  },
+  {
+    "id": 4,
+    "title": "this is title 4",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem qui animi alias vero repudiandae. Amet dolore expedita perferendis! Non cumque harum animi impedit illum omnis ipsa aliquid fugiat laboriosam error!",
+    "img": "./assets/news1.jpg"
+  }
+]
