@@ -6,8 +6,8 @@ const Header = () => {
 
     const myNavbar = (
         <>
-            <li><a>Item 1</a></li>
-            <li><a>Item 3</a></li>
+            <li><Link to='/'>Home</Link></li>
+            <li><Link to='/about'>About</Link></li>
         </>
     )
 
