@@ -7,7 +7,7 @@ const Reader = () => {
                 <img src="https://placeimg.com/260/400/arch" className="w-12 h-12 rounded-full shadow-2xl" alt='' />
                 <div className='p-0'>
                     <h1 className="text-xl font-bold">Hi, Reader!</h1>
-                    <p className="p-0">Provident cupiditate voluptatem nisi.</p>
+                    <p className="p-0">Here is your news!</p>
                 </div>
             </div>
         </div>

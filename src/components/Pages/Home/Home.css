@@ -1,0 +1,17 @@
+.pagination .selected {
+  background: orange;
+  color: #fff;
+}
+
+.pagination button {
+  padding: 4px 8px;
+  border: 1px solid #d80;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.pagination select {
+  border: 1px solid #d80;
+  border-radius: 5px;
+  padding: 5px;
+}
