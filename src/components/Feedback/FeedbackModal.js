@@ -38,7 +38,7 @@ const FeedbackModal = () => {
                                     <textarea className="textarea textarea-bordered h-24" placeholder="address"></textarea>
                                 </div>
 
-                                <div className="form-control">
+                                {/* <div className="form-control">
                                     <label className="label">
                                         <span className="label-text">Country</span>
                                     </label>
@@ -61,7 +61,7 @@ const FeedbackModal = () => {
                                         <span className="label-text">Phone Number</span>
                                     </label>
                                     <input type="number" placeholder="phone number" className="input input-bordered w-full max-w-xs" autoComplete='off' />
-                                </div>
+                                </div> */}
                                 <div className='mt-5'>
                                     <button type='submit' className='btn btn-prinary'>Submit Feedback</button>
                                 </div>
