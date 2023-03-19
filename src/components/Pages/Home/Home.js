@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Feedback from '../../Feedback/Feedback';
@@ -13,30 +14,22 @@ import './Home.css';
 const Home = () => {
     const [horizontal, setHorizontal] = useState(true);
     const [news, setNews] = useState([]);
+    console.log(news)
     const [horizontalNews, setHorizontalNews] = useState({});
-    const [pageCount, setPageCount] = useState(0);
-    const [page, setPage] = useState(0);
+    // const [pageCount, setPageCount] = useState(0);
+    // const [page, setPage] = useState(0);
     // const [size, setSize] = useState(10)
 
     useEffect(()=>{
 
-        const url = `https://jsonplaceholder.typicode.com/posts?page=${page}`;
+        const url = `http://localhost:5000/api/news`;
         // fetch('newsData.json')
         const getData = async()=>{
-            const res = await fetch(url);
-            const data = await res.json();
-            // console.log(page, size, data.length)
-            const totalPage = Math.ceil(data.length /20);
-            // console.log(totalPage);
-            if(totalPage >= 5){
-                setNews(data.slice(page, totalPage));
-            } else{
-
-                setNews(data);
-            }
+            const result = await axios.get(url);
+            setNews(result.data.data)
         }
         getData();
-    }, [page])
+    }, [])
 
     const handleHorizontal = () =>{
         setHorizontal(false);
@@ -45,18 +38,7 @@ const Home = () => {
         setHorizontal(true);
     };
 
-    useEffect(()=>{
-        const url = `https://jsonplaceholder.typicode.com/posts`;
-        // fetch('newsData.json')
-        const getPage = async()=>{
-            const res = await fetch(url);
-            const data = await res.json();
-            const count = data.length;
-            const pages = Math.ceil(count/20);
-            setPageCount(pages);
-        }
-        getPage();
-    }, [])
+
 
 
 
@@ -67,7 +49,7 @@ const Home = () => {
                 <div className="drawer-content flex flex-col justify-start">
 
                     <div className='p-5'>
-                        <h1 className='text-3xl font-bold mb-5'>Welcome back, Dashboard {news.length}/100</h1>
+                        <h1 className='text-3xl font-bold mb-5'>Welcome back, Dashboard</h1>
                         <div>
                             { horizontal && horizontal ? (<div>
                                 { news && news?.map(newData => <HorizontalNewsFeedback setHorizontalNews={setHorizontalNews} newData={newData} /> )}
@@ -79,12 +61,12 @@ const Home = () => {
                             )
                             }
                             <div className='pagination'>
-                                {
+                                {/* {
                                     [...Array(pageCount).keys()]
                                     .map(number => <button 
                                         onClick={()=>setPage(number)}
                                         className={page === number ? 'selected': ''}>{number + 1}</button>)
-                                }
+                                } */}
                                
                             </div>
                         </div>
